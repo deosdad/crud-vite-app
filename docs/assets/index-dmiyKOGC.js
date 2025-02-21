@@ -43,7 +43,7 @@
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${N}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1 id="app-title">Practica crud con vite</h1>
+    <h1 id="app-title">Practica CRUD con vite</h1>
     <div class="card">
       
     </div>
