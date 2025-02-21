@@ -44,7 +44,7 @@
       <img src="${N}" class="logo vanilla" alt="JavaScript logo" />
     </a>
     <h1 id="app-title">Practica CRUD con vite</h1>
-    <h1 id="app-title">Funciona correctamente cuando ejecuto npm run server</h1>
+    <p>Funciona correctamente cuando ejecuto npm run server<p>
     <div class="card">
       
     </div>
