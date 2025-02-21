@@ -9,6 +9,7 @@ document.querySelector('#app').innerHTML = `
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
     <h1 id="app-title">Practica CRUD con vite</h1>
+    <h1 id="app-title">Practica CRUD con vite</h1>
     <div class="card">
       
     </div>
