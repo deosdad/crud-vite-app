@@ -40,11 +40,10 @@
             </tr>    
         `}),u.querySelector("tbody").innerHTML=a},C=e=>{const t=document.createElement("button");t.innerText="Next >";const a=document.createElement("button");a.innerText="< Prev";const r=document.createElement("span");r.id="current-page",r.innerText=l.getCurrentPage(),e.append(a,r,t),t.addEventListener("click",async()=>{await l.loadNextPage(),r.innerText=l.getCurrentPage(),h(e)}),a.addEventListener("click",async()=>{await l.loadPreviousPage(),r.innerText=l.getCurrentPage(),h(e)})},j=e=>{const{avatar:t,balance:a,firstName:r,gender:n,id:s,isActive:o,lastName:m}=e;return{avatar:t,balance:a,first_name:r,gender:n,id:s,isActive:o,last_name:m}},k=async e=>{const t=new y(e);if(!t.firstName||!t.lastName)throw"First & Last Name are required";const a=j(t);let r;return t.id?r=await I(a):(a.id=await l.getNextId(),r=await F(a)),p(r)},F=async e=>await(await fetch("http://localhost:3001/users",{method:"POST",body:JSON.stringify(e),headers:{"Content-Type":"application/json"}})).json(),I=async e=>{const t=`http://localhost:3001/users/${e.id}`;return await(await fetch(t,{method:"PATCH",body:JSON.stringify(e),headers:{"Content-Type":"application/json"}})).json()},O=async e=>{e.innerHTML="Loading...",await l.loadNextPage(),e.innerHTML="",h(e),C(e),S(e),T(e,async t=>{const a=await k(t);l.onUserChange(a),h()})};document.querySelector("#app").innerHTML=`
   <div>
-
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${N}" class="logo vanilla" alt="JavaScript logo" />
     </a>
-    <h1 id="app-title">Hello Vite!</h1>
+    <h1 id="app-title">Practica crud con vite</h1>
     <div class="card">
       
     </div>
